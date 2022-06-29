@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import requests
 
-import odoo.modules.registry
 from odoo import http
 from odoo.http import request
 # from . import service
@@ -24,7 +23,7 @@ class Controllers(http.Controller):
     #     request.session.authenticate(kwargs.get('db'),kwargs.get('username'),kwargs.get('password'))
     #     return json.dumps(request.env['ir.http'].session_info())
 
-    @http.route('/api/insert', auth='user', type='http')
+    @http.route('/api/insert', auth='user', type='json')
     def insert_course(self, **kw):
         if kw.get("token") == token:
             courses = request.env['course'].sudo().create({
@@ -35,7 +34,7 @@ class Controllers(http.Controller):
             return json.dumps(courses)
         return 'invalid token'
 
-    @http.route('/api/search/course', auth='public', type='http')
+    @http.route('/api/search/course', auth='public', type='json')
     def search_course_by_time(self,**kwargs):
         if kwargs.get("token") == token:
             try:
@@ -51,7 +50,7 @@ class Controllers(http.Controller):
         return 'invalid token'
 
 
-    @http.route('/api/delete',auth='user',type='http')
+    @http.route('/api/delete',auth='user',type='json')
     def delete_course(self,**kwargs):
         if kwargs.get("token") == token:
             try:
@@ -62,7 +61,7 @@ class Controllers(http.Controller):
                 return 'fail'
         return 'invalid token'
 
-    @http.route('/api/update',auth='user',type = 'http')
+    @http.route('/api/update',auth='user',type = 'json')
     def update_course(self,**kwargs):
         if kwargs.get("token") == token:
             try:

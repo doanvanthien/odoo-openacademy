@@ -11,18 +11,6 @@
         </field>
     </record>
 
-    <record id="attendees_view_kanban" model="ir.ui.view">
-        <field name="name">attendees.view.kanban</field>
-        <field name="model">attendees</field>
-        <field name="arch" type="xml">
-            <kanban name="attendees_list">
-                <field name="name"/>
-                <field name="session_ids"/>
-            </kanban>
-
-        </field>
-    </record>
-
     <record id="attendees_view_form" model="ir.ui.view">
         <field name="name">attendees.view.form</field>
         <field name="model">attendees</field>
@@ -38,16 +26,16 @@
         </field>
     </record>
 
-    <record id="attendees_view_tree_2" model="ir.ui.view">
-        <field name="name">attendees.view.view.2</field>
-        <field name="model">partner</field>
-        <field name="inherit_id" ref="attendees_view_tree"></field>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='session_ids']" position="after">
-                <field name="instructor"/>
-            </xpath>
-        </field>
-    </record>
+<!--    <record id="attendees_view_tree_2" model="ir.ui.view">-->
+<!--        <field name="name">attendees.view.view.2</field>-->
+<!--        <field name="model">partner</field>-->
+<!--        <field name="inherit_id" ref="attendees_view_tree"></field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//field[@name='session_ids']" position="attributes">-->
+<!--                <field name="instructor"/>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
 
     <record id="attendees_view_form_2" model="ir.ui.view">
         <field name="name">attendees.view.form.2</field>
@@ -63,7 +51,7 @@
 
     <record id="attendees_action_list_attendees" model="ir.actions.act_window">
         <field name="name">Attendees</field>
-        <field name="res_model">partner</field>
+        <field name="res_model">attendees</field>
         <field name="view_mode">tree,form,kanban</field>
     </record>
 </odoo>

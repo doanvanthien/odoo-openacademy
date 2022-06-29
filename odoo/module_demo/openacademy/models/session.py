@@ -12,7 +12,7 @@ class Session(models.Model):
 
     course_id = fields.Many2one('course',string ='Course',required=True,ondelete='restrict')
 
-    attendees_ids = fields.Many2many('attendees',string='Attendees', groups='openacademy.group_openacademy_manager')
+    attendees_ids = fields.Many2many('attendees',string='Attendees')
 
     partner_id = fields.Many2one('partner',string='Instructor',domain="[('instructor','=',True)]")
 
