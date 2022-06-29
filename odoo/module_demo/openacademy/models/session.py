@@ -1,4 +1,5 @@
 from odoo import api,models,fields
+from datetime import date
 
 class Session(models.Model):
     _name = 'session'
@@ -6,9 +7,10 @@ class Session(models.Model):
     _rec_name = 'id'
 
     name = fields.Char(string="Name")
-    start_date = fields.Datetime(string="Start Date")
+    start_date = fields.Datetime(string="Start Date" , default= date.today())
     duration = fields.Integer(string="Duration")
     numbers_of_seats = fields.Integer(string="A number of seats")
+    active = fields.Boolean(string="Active",default = True)
 
     course_id = fields.Many2one('course',string ='Course',required=True,ondelete='restrict')
 
@@ -22,6 +24,17 @@ class Session(models.Model):
     def _compute_percentage(self):
         for record in self:
             record.percentage= (len(record.attendees_ids)/record.numbers_of_seats)*100
+
+    @api.onchange('attendees_ids','numbers_of_seats')
+    def _onchange_attendees(self):
+        if len(self.attendees_ids) > self.numbers_of_seats:
+            return {
+                'warning':{
+                    'title': 'Wrong',
+                    'message': 'Full seat'
+                }
+            }
+
 
 
 

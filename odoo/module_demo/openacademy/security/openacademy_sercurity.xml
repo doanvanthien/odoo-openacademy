@@ -26,7 +26,17 @@
             <field name="perm_write" eval="1"/>
             <field name="perm_create" eval="1"/>
             <field name="perm_unlink" eval="0"/>
-            <field name="domain_force">[('session_ids', '!=' , [] )]</field>
+            <field name="domain_force">[('session_ids', 'not in' , [] )]</field>
+        </record>
+
+        <record id="course_rule_read_limit" model="ir.rule">
+            <field name="name">Only read </field>
+            <field name="model_id" ref="model_course"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+            <field name="domain_force">['|',('create_uid','=',False),('create_uid','=',user.id)]</field>
         </record>
     </data>
 </odoo>

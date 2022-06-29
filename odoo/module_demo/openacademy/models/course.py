@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import api,models, fields
 
 class Course(models.Model):
     _name = 'course'
@@ -10,6 +10,7 @@ class Course(models.Model):
     time = fields.Integer(string="Time")
 
     session_ids = fields.One2many('session','course_id',string="Session IDs")
+
 
 
 
