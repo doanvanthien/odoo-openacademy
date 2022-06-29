@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+                <record model="course" id="demo_course_eng">
+                    <field name="title">English</field>
+                </record>
+
+                <record model="course" id="demo_course_chi">
+                    <field name="title">Chinese</field>
+                </record>
+
+                <record model="course" id="demo_course_jap">
+                    <field name="title">Japanese</field>
+                </record>
+    </data>
+</odoo>

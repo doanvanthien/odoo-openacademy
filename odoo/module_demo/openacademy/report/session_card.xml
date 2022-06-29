@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id ="report_session_id_card">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h1 class="text-center">Report Session</h1>
+                        <h2>Name : <span t-field="o.name"></span></h2>
+                        <h2>Start Date : <span t-field="o.start_date"></span></h2>
+                        <h2>Duration : <span t-field="o.duration"></span></h2>
+                        <h2>A number of seats : <span t-field="o.numbers_of_seats"></span></h2>
+                        <h2>Course: <span t-field="o.course_id"></span></h2>
+                        <h2>Attendees: </h2>
+                        <div t-foreach="o.attendees_ids" t-as="attendees_id">
+                            <h3>Name<span t-field="attendees_id.name"/></h3>
+                        </div>
+                        <h2>Instructor: <span t-field="o.partner_id"></span></h2>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="session_card_report" model="ir.actions.report">
+        <field name="name">Session card</field>
+        <field name="model">session</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">openacademy.report_session_id_card</field>
+        <field name="report_file">openacademy.report_session_id_card</field>
+        <field name="print_report_name">'Session-Card'</field>
+        <field name="binding_model_id" ref="model_session"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

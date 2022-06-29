@@ -1,0 +1,7 @@
+<odoo>
+    <menuitem id="openacademy_menu_root" name="Open Academy" groups="group_openacademy_user,group_openacademy_manager"/>
+
+    <menuitem id="openacademy_menu_course" name="Course" parent="openacademy_menu_root" action="course_action_list_course" groups="group_openacademy_user,group_openacademy_manager"/>
+    <menuitem id="openacademy_menu_session" name="Session" parent="openacademy_menu_root" action="session_action_list_session" groups="group_openacademy_user,group_openacademy_manager"/>
+    <menuitem id="openacademy_menu_attendees" name="Attendees" parent="openacademy_menu_root" action="attendees_action_list_attendees" groups="group_openacademy_manager"/>
+</odoo>

@@ -1,0 +1,45 @@
+<odoo>
+    <record id="session_view_tree" model="ir.ui.view">
+        <field name="name">session.view.tree</field>
+        <field name="model">session</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="start_date"/>
+                <field name="duration"/>
+                <field name="numbers_of_seats"/>
+                <field name="course_id"/>
+                <field name="attendees_ids" options="{'no_create':True}"/>
+                <field name="partner_id"/>
+                <field name="percentage" widget="progressbar"/>
+            </tree>
+
+        </field>
+    </record>
+
+    <record id="session_view_form" model="ir.ui.view">
+        <field name="name">session.view.form</field>
+        <field name="model">session</field>
+        <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="start_date"/>
+                            <field name="duration"/>
+                            <field name="numbers_of_seats"/>
+                            <field name="course_id"/>
+                            <field name="attendees_ids"/>
+                            <field name="partner_id"/>
+                        </group>
+                     </sheet>
+                </form>
+        </field>
+    </record>
+
+    <record id="session_action_list_session" model="ir.actions.act_window">
+        <field name="name">Session</field>
+        <field name="res_model">session</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
