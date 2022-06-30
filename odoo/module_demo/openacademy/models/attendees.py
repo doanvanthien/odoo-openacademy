@@ -9,12 +9,11 @@ class Attendees(models.Model):
 
     session_ids = fields.Many2many('session',string='Session IDs')
 
-class Partner(models.Model):
-    _name = 'partner'
-    _description = 'instructor'
+class Attendees(models.Model):
+    _name = 'attendees'
     _inherit = 'attendees'
 
-    instructor = fields.Boolean(string = 'Instructor')
+    instructor = fields.Boolean(string = 'Instructor', default= False)
 
     def name_get(self):
         res=[]

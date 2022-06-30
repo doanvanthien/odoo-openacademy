@@ -1,5 +1,6 @@
 from odoo import api,models,fields
 from datetime import date
+from odoo.exceptions import ValidationError
 
 class Session(models.Model):
     _name = 'session'
@@ -16,7 +17,7 @@ class Session(models.Model):
 
     attendees_ids = fields.Many2many('attendees',string='Attendees')
 
-    partner_id = fields.Many2one('partner',string='Instructor',domain="[('instructor','=',True)]")
+    instructor_id = fields.Many2one('attendees',string='Instructor',domain="[('instructor','=',True)]")
 
     percentage = fields.Float(compute='_compute_percentage')
 
@@ -34,6 +35,12 @@ class Session(models.Model):
                     'message': 'Full seat'
                 }
             }
+
+    @api.constrains('instructor_id','attendees_ids')
+    def _check_attendees(self):
+        for record in self:
+            if record.instructor_id.id in [x.id for x in record.attendees_ids] :
+                raise ValidationError('attendee and instructor invalid')
 
 
 

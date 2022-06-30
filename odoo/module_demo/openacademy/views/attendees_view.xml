@@ -26,24 +26,24 @@
         </field>
     </record>
 
-<!--    <record id="attendees_view_tree_2" model="ir.ui.view">-->
-<!--        <field name="name">attendees.view.view.2</field>-->
-<!--        <field name="model">partner</field>-->
-<!--        <field name="inherit_id" ref="attendees_view_tree"></field>-->
-<!--        <field name="arch" type="xml">-->
-<!--            <xpath expr="//field[@name='session_ids']" position="attributes">-->
-<!--                <field name="instructor"/>-->
-<!--            </xpath>-->
-<!--        </field>-->
-<!--    </record>-->
+    <record id="attendees_view_tree_2" model="ir.ui.view">
+        <field name="name">attendees.view.view.2</field>
+        <field name="model">attendees</field>
+        <field name="inherit_id" ref="attendees_view_tree"></field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='session_ids']" position="after">
+                <field name="instructor"/>
+            </xpath>
+        </field>
+    </record>
 
     <record id="attendees_view_form_2" model="ir.ui.view">
         <field name="name">attendees.view.form.2</field>
-        <field name="model">partner</field>
+        <field name="model">attendees</field>
         <field name="inherit_id" ref="attendees_view_form"></field>
         <field name="arch" type="xml">
             <xpath expr="//group[@name='attendees_view']" position="after">
-                <field name="instructor"/>
+                <field name="instructor" string="Instructor"/>
             </xpath>
         </field>
     </record>
