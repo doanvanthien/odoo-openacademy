@@ -18,13 +18,17 @@ class Course(models.Model):
             if record.title == record.description:
                 raise ValidationError('title has to different from description')
 
-    @api.constrains('title')
-    def _check_unique_title(self):
-            count_record = self.search_count([('title','=',self.title),('id','!=',self.id)])
-            if count_record > 0:
-                raise ValidationError('title is existing')
+    # @api.constrains('title')
+    # def _check_unique_title(self):
+    #         count_record = self.search_count([('title','=',self.title),('id','!=',self.id)])
+    #         if count_record > 0:
+    #             raise ValidationError('title is existing')
+    #
 
 
+    _sql_constraints = [
+        ('unique_title','unique (title)','title must be unique')
+    ]
 
 
 

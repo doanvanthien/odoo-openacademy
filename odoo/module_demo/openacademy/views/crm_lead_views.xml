@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="crm_case_tree_view_leads" model="ir.ui.view">
+        <field name="name">crm.case.tree.view.leads.2</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='phone']" position="after">
+                <field name="course" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+<!--    <record id="quick_create_opportunity_form" model="ir.ui.view">-->
+<!--        <field name="name">quick.create.opportunity.form.2</field>-->
+<!--        <field name="model">crm.lead</field>-->
+<!--        <field name="inherit_id" ref="crm.quick_create_opportunity_form"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//field[@name='phone']" position="after">-->
+<!--                <field name="course" invisible="1"/>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="name">crm.lead.view.form.2</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='lead_info']" position="inside">
+                <field name="course" options='{"no_open": True}'/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_crm_case_leads_filter" model="ir.ui.view">
+        <field name="name">crm.lead.search.lead.2</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='activity_state']" position="after">
+                <field name="course"/>
+            </xpath>
+            <xpath expr="//group" position="inside">
+                <separator orientation="vertical" />
+                <field name="course" string="Course" context="{'group_by':'course'}" />
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

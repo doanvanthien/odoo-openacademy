@@ -20,7 +20,10 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': [
+                'base',
+                'crm',
+                ],
 
     # always loaded
     'data': [
@@ -30,6 +33,7 @@
         'views/course_view.xml',
         'views/session_view.xml',
         'views/course_menu_view.xml',
+        'views/crm_lead_views.xml',
         'report/session_card.xml',
 
     ],
