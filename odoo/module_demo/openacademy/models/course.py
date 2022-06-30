@@ -30,6 +30,25 @@ class Course(models.Model):
         ('unique_title','unique (title)','title must be unique')
     ]
 
+class Course(models.Model):
+    _inherit = 'course'
+
+    active = fields.Boolean('Active', default=True)
+    lead_ids = fields.One2many('crm.lead', 'course')
+    lead_count = fields.Integer(string = 'Lead', default=0, compute= "_lead_count")
+
+    @api.depends('lead_ids')
+    def _lead_count(self):
+        for record in self:
+            record.lead_count = len(record.lead_ids)
+
+    def action_view_lead(self):
+        action = self.env["ir.actions.actions"]._for_xml_id("crm.crm_lead_all_leads")
+        action['domain'] = [('id', 'in', self.lead_ids.ids), ('type', '=', 'lead')]
+        action['context'] = dict(self._context, create=False)
+        return action
+
+
 
 
 
