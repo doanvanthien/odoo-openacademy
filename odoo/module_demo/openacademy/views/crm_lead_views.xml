@@ -30,6 +30,12 @@
             <xpath expr="//group[@name='lead_info']" position="inside">
                 <field name="course" options='{"no_open": True}'/>
             </xpath>
+            <xpath expr="//group/field[@name='tag_ids']" position="after">
+                <field name="course" options='{"no_open": True}'/>
+            </xpath>
+<!--            <xpath expr="//field[@name='expected_revenue']" position="attributes">-->
+<!--                <attribute name='context'>{'default_expected_revenue': context.get('default_expected_revenue')}</attribute>-->
+<!--            </xpath>-->
         </field>
     </record>
 

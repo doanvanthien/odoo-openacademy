@@ -34,18 +34,37 @@ class Course(models.Model):
     _inherit = 'course'
 
     active = fields.Boolean('Active', default=True)
-    lead_ids = fields.One2many('crm.lead', 'course')
+    lead_ids = fields.One2many('crm.lead', 'course', domain=[('type', '=', 'lead')])
     lead_count = fields.Integer(string = 'Lead', default=0, compute= "_lead_count")
+
+    price = fields.Integer(string = 'Price Unit')
+
+    opportunity_ids = fields.One2many('crm.lead','course',domain=[('type','=','opportunity')])
+    opportunity_count = fields.Integer(string = 'Opportunity', default = 0, compute ="_opportunity_count")
 
     @api.depends('lead_ids')
     def _lead_count(self):
         for record in self:
             record.lead_count = len(record.lead_ids)
 
+    @api.depends('opportunity_ids')
+    def _opportunity_count(self):
+        for record in self:
+            record.opportunity_count = len(record.opportunity_ids)
+
     def action_view_lead(self):
+        self.ensure_one()
         action = self.env["ir.actions.actions"]._for_xml_id("crm.crm_lead_all_leads")
         action['domain'] = [('id', 'in', self.lead_ids.ids), ('type', '=', 'lead')]
         action['context'] = dict(self._context, create=False)
+        return action
+
+    def action_view_opportunity(self):
+        self.ensure_one()
+        action = self.env["ir.actions.actions"]._for_xml_id("crm.crm_lead_opportunities")
+        action['domain'] = [('id', 'in', self.opportunity_ids.ids), ('type', '=', 'opportunity')]
+        action['context'] = dict(self._context, create=True)
+        action['context'] = {'default_course':self.id,'default_expected_revenue': self.price,'default_type':'opportunity'}
         return action
 
 
