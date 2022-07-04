@@ -5,15 +5,15 @@
             <t t-foreach="docs" t-as="o">
                 <t t-call="web.external_layout">
                     <div class="page">
-                        <h1 class="text-center" t-field="o.name"></h1>
+                        <h1 class="text-center" t-field="o.name"/>
                         <div class="row">
                             <div class="col-7">
-                                <h5>Start Date : <span t-field="o.start_date"></span></h5>
-                                <h5>A number of seats : <span t-field="o.numbers_of_seats"></span></h5>
+                                <h5>Start Date : <span t-field="o.start_date"/></h5>
+                                <h5>A number of seats : <span t-field="o.numbers_of_seats"/></h5>
                             </div>
                             <div class="col-5">
-                                <h5>Duration : <span t-field="o.duration"></span></h5>
-                                <h5>Course: <span t-field="o.course_id"></span></h5>
+                                <h5>Duration : <span t-field="o.duration"/></h5>
+                                <h5>Course: <span t-field="o.course_id"/></h5>
                             </div>
                         </div>
                         <div>
@@ -33,7 +33,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <h5>Instructor: <span t-field="o.partner_id"></span></h5>
+                        <h5>Instructor: <span t-field="o.partner_id"/></h5>
                     </div>
                     <div class="footer">
                             Email: company@gmail.com. Phone: 012345678

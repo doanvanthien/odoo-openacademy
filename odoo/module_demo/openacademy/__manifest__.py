@@ -40,7 +40,6 @@
     # only loaded in demonstration mode
     'demo': [
         'demo/course_demo.xml',
-        'demo/demo.xml',
     ],
     'license': 'LGPL-3',
 }

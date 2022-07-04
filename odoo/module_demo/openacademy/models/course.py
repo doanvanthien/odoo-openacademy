@@ -67,6 +67,13 @@ class Course(models.Model):
         action['context'] = {'default_course':self.id,'default_expected_revenue': self.price,'default_type':'opportunity'}
         return action
 
+    @api.returns('self')
+    def copy(self, default=None):
+        default = dict(default or {})
+        default.update({
+            'title': 'Copy of ' + self.title })
+        return super(Course, self).copy(default)
+
 
 
 

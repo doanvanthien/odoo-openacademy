@@ -46,13 +46,13 @@
             <form>
                 <sheet>
                     <div name='title_course' class="oe_title">
-                        <label for="title"></label>
+                        <label for="title"/>
                         <h1>
-                            <field name="title"></field>
+                            <field name="title"/>
                         </h1>
                     </div>
                     <group>
-                        <field name="description" groups='openacademy.group_openacademy_manager'></field>
+                        <field name="description" groups='openacademy.group_openacademy_manager'/>
                         <field name="time"/>
                         <field name="price" widget="monetary"/>
                     </group>
@@ -73,7 +73,7 @@
                                 class="oe_stat_button" icon="fa-bullhorn"
                                 attrs ="{'invisible':[('opportunity_count','&lt;', 1)]}">
                                 <div class="o_stat_info">
-                                    <field name="opportunity_count" class="o_stat_value"></field>
+                                    <field name="opportunity_count" class="o_stat_value"/>
                                     <span class="o_stat_text" attrs ="{'invisible':[('lead_count','&lt;', 2)]}"> Opportunities </span>
                                     <span class="o_stat_text" attrs ="{'invisible':[('lead_count','&gt;', 1)]}"> Opportunity </span>
                                 </div>
@@ -82,7 +82,7 @@
                                 class="oe_stat_button" icon="fa-star"
                                 attrs ="{'invisible':[('lead_count','&lt;', 1)]}">
                                 <div class="o_stat_info">
-                                    <field name="lead_count" class="o_stat_value"></field>
+                                    <field name="lead_count" class="o_stat_value"/>
                                     <span class="o_stat_text" attrs ="{'invisible':[('lead_count','&lt;', 2)]}"> Leads </span>
                                     <span class="o_stat_text" attrs ="{'invisible':[('lead_count','&gt;', 1)]}"> Lead </span>
                                 </div>
@@ -97,9 +97,9 @@
         <field name="model">course</field>
         <field name="arch" type="xml">
             <search>
-                <field name="title"></field>
-                <field name="description" ></field>
-                <field name="time"></field>
+                <field name="title"/>
+                <field name="description"/>
+                <field name="time"/>
             </search>
         </field>
     </record>
@@ -109,4 +109,5 @@
         <field name="res_model">course</field>
         <field name="view_mode">tree,form,kanban</field>
     </record>
+
 </odoo>
