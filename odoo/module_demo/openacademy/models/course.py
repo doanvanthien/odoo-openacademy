@@ -30,7 +30,7 @@ class Course(models.Model):
         ('unique_title','unique (title)','title must be unique')
     ]
 
-class Course(models.Model):
+class Course2(models.Model):
     _inherit = 'course'
 
     active = fields.Boolean('Active', default=True)
@@ -41,6 +41,8 @@ class Course(models.Model):
 
     opportunity_ids = fields.One2many('crm.lead','course',domain=[('type','=','opportunity')])
     opportunity_count = fields.Integer(string = 'Opportunity', default = 0, compute ="_opportunity_count")
+
+    total_expected = fields.Integer(string = 'Total expected', default=0 , compute="_compute_total_expected")
 
     @api.depends('lead_ids')
     def _lead_count(self):
@@ -75,7 +77,13 @@ class Course(models.Model):
         return super(Course, self).copy(default)
 
 
-
+    @api.depends('opportunity_ids')
+    def _compute_total_expected(self):
+        for record in self:
+            total = 0
+            for opportunity in record.opportunity_ids.ids:
+                total += self.env['crm.lead'].search([('id','=',opportunity),('stage_id','in',(3,4))]).expected_revenue
+            record.total_expected = total
 
 
 

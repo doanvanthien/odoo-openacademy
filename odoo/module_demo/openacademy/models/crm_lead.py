@@ -4,7 +4,7 @@ class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
     course = fields.Many2one('course',string='Course',ondelete="set null")
-    expected_revenue = fields.Monetary(compute='_expected_revenue')
+    expected_revenue = fields.Monetary(compute='_expected_revenue', readonly = False)
 
     @api.depends('course')
     def _expected_revenue(self):

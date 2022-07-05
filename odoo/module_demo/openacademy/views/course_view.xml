@@ -10,6 +10,7 @@
                 <field name="time"/>
                 <field name="price" widget="monetary"/>
                 <field name="session_ids"/>
+                <field name="total_expected"/>
             </tree>
         </field>
     </record>
@@ -55,6 +56,7 @@
                         <field name="description" groups='openacademy.group_openacademy_manager'/>
                         <field name="time"/>
                         <field name="price" widget="monetary"/>
+                        <field name="total_expected"/>
                     </group>
                 </sheet>
             </form>
