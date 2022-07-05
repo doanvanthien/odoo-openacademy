@@ -19,7 +19,7 @@ class Session(models.Model):
 
     instructor_id = fields.Many2one('attendees',string='Instructor',domain="[('instructor','=',True)]")
 
-    percentage = fields.Float(compute='_compute_percentage')
+    percentage = fields.Float(compute='_compute_percentage' )
 
     @api.depends('attendees_ids')
     def _compute_percentage(self):
