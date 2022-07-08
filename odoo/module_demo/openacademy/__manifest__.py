@@ -36,6 +36,7 @@
         'views/course_menu_view.xml',
         'views/crm_lead_views.xml',
         'report/session_card.xml',
+        'wizard/add_attendee_view.xml',
 
     ],
     'assets':{

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record id="view_add_attendees_form" model = "ir.ui.view">
+        <field name="name">view.add.attendees.form</field>
+        <field name="model">add.attendee</field>
+        <field name="arch" type="xml">
+            <form string="Add attendees to sessions">
+                <group>
+                    <field name="attendees_ids"></field>
+                </group>
+                <footer>
+                    <button string="OK" name="add_attendees" type="object" class="btn-primary"/>
+                    <button string="Cancel" class ="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_add_attendees" model="ir.actions.act_window">
+        <field name="name">Add Attendees</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">add.attendee</field>
+        <field name="binding_model_id" ref="model_session"/>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="view_add_attendees_form"/>
+    </record>
+</odoo>

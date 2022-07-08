@@ -5,3 +5,5 @@ access_attendees_user,openacademy.user,model_attendees,openacademy.group_openaca
 access_attendees_manager,openacademy.manager,model_attendees,openacademy.group_openacademy_manager,1,1,1,1
 access_session_user,openacademy.user,model_session,openacademy.group_openacademy_user,1,0,0,0
 access_session_manager,openacademy.manager,model_session,openacademy.group_openacademy_manager,1,1,1,1
+access_add.attendee_user,openacademy.user,model_add_attendee,openacademy.group_openacademy_user,1,0,0,0
+access_add.attendee_manager,openacademy.manager,model_add_attendee,openacademy.group_openacademy_manager,1,1,1,1
