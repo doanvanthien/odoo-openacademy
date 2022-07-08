@@ -7,7 +7,7 @@ class Course(models.Model):
     _rec_name = 'title'
 
     title = fields.Char(string = "Title", required = True, index=True)
-    description = fields.Char(string = "Description")
+    description = fields.Char(string = "Description", translate=True)
     time = fields.Integer(string="Time")
 
     session_ids = fields.One2many('session','course_id',string="Session IDs")
@@ -36,6 +36,7 @@ class Course(models.Model):
             self.description = 'learn ' + self.title
 
 class Course2(models.Model):
+    _name ='course'
     _inherit = 'course'
 
     active = fields.Boolean('Active', default=True)
@@ -74,12 +75,13 @@ class Course2(models.Model):
         action['context'] = {'default_course':self.id,'default_expected_revenue': self.price,'default_type':'opportunity'}
         return action
 
-    @api.returns('self')
+    @api.returns('self', lambda value: value.id)
     def copy(self, default=None):
+        self.ensure_one()
         default = dict(default or {})
         default.update({
-            'title': 'Copy of ' + self.title })
-        return super(Course2, self).copy(default)
+            'title': 'Copy of ' + self.title})
+        return super().copy(default)
 
 
     @api.depends('opportunity_ids')
