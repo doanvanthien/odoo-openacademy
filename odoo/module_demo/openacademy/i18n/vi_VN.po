@@ -1,0 +1,507 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* openacademy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-08 09:09+0000\n"
+"PO-Revision-Date: 2022-07-08 09:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: openacademy
+#: model:ir.actions.report,print_report_name:openacademy.session_card_report
+msgid "'Session-Card'"
+msgstr ""
+
+#. module: openacademy
+#: model_terms:ir.ui.view,arch_db:openacademy.course_view_form_2
+msgid ""
+"<span class=\"o_stat_text\" attrs=\"{'invisible':[('lead_count','&lt;', 2)]}\">Leads</span>\n"
+"                            <span class=\"o_stat_text\" attrs=\"{'invisible':[('lead_count','&gt;', 1)]}\">Lead</span>"
+msgstr ""
+
+#. module: openacademy
+#: model_terms:ir.ui.view,arch_db:openacademy.course_view_form_2
+msgid ""
+"<span class=\"o_stat_text\" attrs=\"{'invisible':[('lead_count','&lt;', 2)]}\">Opportunities\n"
+"                            </span>\n"
+"                            <span class=\"o_stat_text\" attrs=\"{'invisible':[('lead_count','&gt;', 1)]}\">Opportunity\n"
+"                            </span>"
+msgstr ""
+
+#. module: openacademy
+#: model:ir.model,name:openacademy.model_course
+msgid "A course and description"
+msgstr "Khóa học"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__numbers_of_seats
+msgid "A number of seats"
+msgstr "Số lượng chỗ"
+
+#. module: openacademy
+#: model_terms:ir.ui.view,arch_db:openacademy.report_session_id_card
+msgid "A number of seats :"
+msgstr "Số lượng chỗ :"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__message_needaction
+msgid "Action Needed"
+msgstr "Cần tác vụ"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_course__active
+#: model:ir.model.fields,field_description:openacademy.field_session__active
+msgid "Active"
+msgstr "Đang hoạt động"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Thể hiện hoạt động ngoại lệ"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__activity_state
+msgid "Activity State"
+msgstr "Trạng thái hoạt động"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Biểu tượng kiểu hoạt động"
+
+#. module: openacademy
+#: model:ir.actions.act_window,name:openacademy.action_add_attendees
+msgid "Add Attendees"
+msgstr "Thêm người tham dự"
+
+#. module: openacademy
+#: model_terms:ir.ui.view,arch_db:openacademy.view_add_attendees_form
+msgid "Add attendees to sessions"
+msgstr "Thêm người tham dự cho các lớp học"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số tệp đính kèm"
+
+#. module: openacademy
+#: model:ir.actions.act_window,name:openacademy.attendees_action_list_attendees
+#: model:ir.model.fields,field_description:openacademy.field_add_attendee__attendees_ids
+#: model:ir.model.fields,field_description:openacademy.field_session__attendees_ids
+#: model:ir.ui.menu,name:openacademy.openacademy_menu_attendees
+msgid "Attendees"
+msgstr "Người tham dự"
+
+#. module: openacademy
+#: model_terms:ir.ui.view,arch_db:openacademy.report_session_id_card
+msgid "Attendees:"
+msgstr "Người tham dự : "
+
+#. module: openacademy
+#: model_terms:ir.ui.view,arch_db:openacademy.view_add_attendees_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: openacademy
+#: model:ir.actions.act_window,name:openacademy.course_action_list_course
+#: model:ir.model.fields,field_description:openacademy.field_crm_lead__course
+#: model:ir.model.fields,field_description:openacademy.field_session__course_id
+#: model:ir.ui.menu,name:openacademy.openacademy_menu_course
+#: model_terms:ir.ui.view,arch_db:openacademy.view_crm_case_leads_filter
+msgid "Course"
+msgstr "Khóa học"
+
+#. module: openacademy
+#: model_terms:ir.ui.view,arch_db:openacademy.report_session_id_card
+msgid "Course:"
+msgstr "Khóa học:"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_add_attendee__create_uid
+#: model:ir.model.fields,field_description:openacademy.field_attendees__create_uid
+#: model:ir.model.fields,field_description:openacademy.field_course__create_uid
+#: model:ir.model.fields,field_description:openacademy.field_session__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_add_attendee__create_date
+#: model:ir.model.fields,field_description:openacademy.field_attendees__create_date
+#: model:ir.model.fields,field_description:openacademy.field_course__create_date
+#: model:ir.model.fields,field_description:openacademy.field_session__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_course__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_add_attendee__display_name
+#: model:ir.model.fields,field_description:openacademy.field_attendees__display_name
+#: model:ir.model.fields,field_description:openacademy.field_course__display_name
+#: model:ir.model.fields,field_description:openacademy.field_session__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__duration
+msgid "Duration"
+msgstr "Thời gian"
+
+#. module: openacademy
+#: model_terms:ir.ui.view,arch_db:openacademy.report_session_id_card
+msgid "Duration :"
+msgstr "Thời gian :"
+
+#. module: openacademy
+#: model_terms:ir.ui.view,arch_db:openacademy.report_session_id_card
+msgid "Email: company@gmail.com. Phone: 012345678"
+msgstr "Email: company@gmail.com. Số điện thoại: 012345678"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_crm_lead__expected_revenue
+msgid "Expected Revenue"
+msgstr "Doanh thu dự kiến"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__message_follower_ids
+msgid "Followers"
+msgstr "Người theo dõi"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Đối tác)"
+
+#. module: openacademy
+#: model:ir.model.fields,help:openacademy.field_session__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Biểu tượng Font awesome v.d: fa-tasks"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__has_message
+msgid "Has Message"
+msgstr "Có tin nhắn"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_add_attendee__id
+#: model:ir.model.fields,field_description:openacademy.field_attendees__id
+#: model:ir.model.fields,field_description:openacademy.field_course__id
+#: model:ir.model.fields,field_description:openacademy.field_session__id
+#: model_terms:ir.ui.view,arch_db:openacademy.report_session_id_card
+msgid "ID"
+msgstr "ID"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: openacademy
+#: model:ir.model.fields,help:openacademy.field_session__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra một hoạt động ngoại lệ."
+
+#. module: openacademy
+#: model:ir.model.fields,help:openacademy.field_session__message_needaction
+#: model:ir.model.fields,help:openacademy.field_session__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu chọn, các tin nhắn mới yêu cầu sự chú ý của bạn"
+
+#. module: openacademy
+#: model:ir.model.fields,help:openacademy.field_session__message_has_error
+#: model:ir.model.fields,help:openacademy.field_session__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu đánh dấu, một số tin nhắn bị lỗi khi gửi."
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_attendees__instructor
+#: model:ir.model.fields,field_description:openacademy.field_session__instructor_id
+#: model_terms:ir.ui.view,arch_db:openacademy.attendees_view_form_2
+msgid "Instructor"
+msgstr "Người hướng dẫn"
+
+#. module: openacademy
+#: model_terms:ir.ui.view,arch_db:openacademy.report_session_id_card
+msgid "Instructor:"
+msgstr "Người hướng dẫn: "
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_add_attendee____last_update
+#: model:ir.model.fields,field_description:openacademy.field_attendees____last_update
+#: model:ir.model.fields,field_description:openacademy.field_course____last_update
+#: model:ir.model.fields,field_description:openacademy.field_session____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_add_attendee__write_uid
+#: model:ir.model.fields,field_description:openacademy.field_attendees__write_uid
+#: model:ir.model.fields,field_description:openacademy.field_course__write_uid
+#: model:ir.model.fields,field_description:openacademy.field_session__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_add_attendee__write_date
+#: model:ir.model.fields,field_description:openacademy.field_attendees__write_date
+#: model:ir.model.fields,field_description:openacademy.field_course__write_date
+#: model:ir.model.fields,field_description:openacademy.field_session__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_course__lead_count
+#: model:ir.model.fields,field_description:openacademy.field_course__lead_ids
+msgid "Lead"
+msgstr "Tiềm năng"
+
+#. module: openacademy
+#: model:ir.model,name:openacademy.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Tiềm năng/Cơ hội"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Tệp đính kèm chính"
+
+#. module: openacademy
+#: model:res.groups,name:openacademy.group_openacademy_manager
+msgid "Manager"
+msgstr "Quản lý"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__message_has_error
+msgid "Message Delivery error"
+msgstr "Gửi tin nhắn bị lỗi"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__message_ids
+msgid "Messages"
+msgstr "Tin nhắn"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Hạn chót hoạt động"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_attendees__name
+#: model:ir.model.fields,field_description:openacademy.field_session__name
+#: model_terms:ir.ui.view,arch_db:openacademy.report_session_id_card
+msgid "Name"
+msgstr "Tên"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Sự kiện lịch hoạt động kế tiếp"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót hoạt động kế tiếp"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động kế tiếp"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Kiểu hoạt động kế tiếp"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lỗi"
+
+#. module: openacademy
+#: model:ir.model.fields,help:openacademy.field_session__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số tin nhắn cần xử lý"
+
+#. module: openacademy
+#: model:ir.model.fields,help:openacademy.field_session__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số tin nhắn gửi đi bị lỗi"
+
+#. module: openacademy
+#: model:ir.model.fields,help:openacademy.field_session__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số tin nhắn chưa đọc"
+
+#. module: openacademy
+#: model_terms:ir.ui.view,arch_db:openacademy.view_add_attendees_form
+msgid "OK"
+msgstr "OK"
+
+#. module: openacademy
+#: model:ir.module.category,name:openacademy.module_category_openacademy
+#: model:ir.ui.menu,name:openacademy.openacademy_menu_root
+msgid "Open Academy"
+msgstr "Học viện"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_course__opportunity_count
+#: model:ir.model.fields,field_description:openacademy.field_course__opportunity_ids
+msgid "Opportunity"
+msgstr "Cơ hội"
+
+#. module: openacademy
+#: model_terms:ir.ui.view,arch_db:openacademy.report_session_id_card
+msgid "Page:<span class=\"page\"/>/<span class=\"topage\"/>"
+msgstr "Trang:<span class=\"page\"/>/<span class=\"topage\"/>"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__percentage
+msgid "Percentage"
+msgstr "Phần trăm"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_course__price
+msgid "Price Unit"
+msgstr "Đơn giá"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__activity_user_id
+msgid "Responsible User"
+msgstr "Người phụ trách"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Lỗi gửi SMS"
+
+#. module: openacademy
+#: model:ir.actions.act_window,name:openacademy.session_action_list_session
+#: model:ir.model.fields,field_description:openacademy.field_add_attendee__session_id
+#: model:ir.ui.menu,name:openacademy.openacademy_menu_session
+msgid "Session"
+msgstr "Lớp học"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_attendees__session_ids
+#: model:ir.model.fields,field_description:openacademy.field_course__session_ids
+msgid "Session IDs"
+msgstr "Các lớp học"
+
+#. module: openacademy
+#: model:ir.actions.report,name:openacademy.session_card_report
+msgid "Session card"
+msgstr "Thẻ lớp học"
+
+#. module: openacademy
+#: model:ir.model,name:openacademy.model_session
+msgid "Session of course"
+msgstr "Lớp học của khóa"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__start_date
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: openacademy
+#: model_terms:ir.ui.view,arch_db:openacademy.report_session_id_card
+msgid "Start Date :"
+msgstr "Ngày bắt đầu :"
+
+#. module: openacademy
+#: model:ir.model.fields,help:openacademy.field_session__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn phải được chuyển\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Kế hoạch: Các hoạt động trong tương lai."
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_course__time
+msgid "Time"
+msgstr "Thời gian"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_course__title
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_course__total_expected
+msgid "Total expected"
+msgstr "Tổng kì vọng"
+
+#. module: openacademy
+#: model:ir.model.fields,help:openacademy.field_session__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ trên hồ sơ."
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__message_unread
+msgid "Unread Messages"
+msgstr "Tin chưa đọc"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm tin chưa đọc"
+
+#. module: openacademy
+#: model:res.groups,name:openacademy.group_openacademy_user
+msgid "User"
+msgstr "Người dùng"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_session__website_message_ids
+msgid "Website Messages"
+msgstr "Tin nhắn website"
+
+#. module: openacademy
+#: model:ir.model.fields,help:openacademy.field_session__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử liên lạc website"
+
+#. module: openacademy
+#: model:ir.model,name:openacademy.model_attendees
+msgid "people attend session"
+msgstr "Người tham dự khóa học"
+
+#. module: openacademy
+#: model:ir.model.constraint,message:openacademy.constraint_course_unique_title
+msgid "title must be unique"
+msgstr "Tiêu đề phải là duy nhất"
+
+#. module: openacademy
+#: model:ir.model,name:openacademy.model_add_attendee
+msgid "update more attendee for session model"
+msgstr "Cập nhật người tham dự cho lớp học"
