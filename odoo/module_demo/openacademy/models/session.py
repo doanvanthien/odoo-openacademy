@@ -6,6 +6,7 @@ class Session(models.Model):
     _name = 'session'
     _description = 'Session of course'
     _rec_name = 'id'
+    _inherit = ['mail.thread','mail.activity.mixin']
 
     name = fields.Char(string="Name")
     start_date = fields.Datetime(string="Start Date" , default= date.today())

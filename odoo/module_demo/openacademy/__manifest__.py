@@ -23,6 +23,7 @@
     'depends': [
                 'base',
                 'crm',
+                'mail',
                 ],
 
     # always loaded
@@ -37,6 +38,11 @@
         'report/session_card.xml',
 
     ],
+    'assets':{
+        'web.assets_backend':  [
+            'openacademy/static/src/js/demo_widget.js',
+        ]
+    },
     # only loaded in demonstration mode
     'demo': [
         'demo/course_demo.xml',
