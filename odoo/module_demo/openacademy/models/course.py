@@ -30,6 +30,11 @@ class Course(models.Model):
         ('unique_title','unique (title)','title must be unique')
     ]
 
+    @api.onchange('title')
+    def _set_description(self):
+        if self.title:
+            self.description = 'learn ' + self.title
+
 class Course2(models.Model):
     _inherit = 'course'
 
@@ -84,6 +89,11 @@ class Course2(models.Model):
             for opportunity in record.opportunity_ids.ids:
                 total += self.env['crm.lead'].search([('id','=',opportunity),('stage_id','in',(3,4))]).expected_revenue
             record.total_expected = total
+
+
+
+
+
 
 
 

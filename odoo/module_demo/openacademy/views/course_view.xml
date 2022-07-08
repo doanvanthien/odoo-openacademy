@@ -14,6 +14,7 @@
             </tree>
         </field>
     </record>
+
     <record id="course_view_kanban" model="ir.ui.view">
         <field name="name">course.view.kanban</field>
         <field name="model">course</field>
@@ -25,7 +26,9 @@
                             <div class="oe_kanban_details">
                                 <div class="row">
                                     <div class="col-md-5">
-                                        <strong><field name="title"/></strong>
+                                        <strong>
+                                            <field name="title"/>
+                                        </strong>
                                         <field name="description"/>
                                         <field name="price" widget="monetary"/>
                                         <div name="tags"/>
@@ -52,18 +55,24 @@
                             <field name="title"/>
                         </h1>
                     </div>
+                    <div class="row container">
+                        <group class="col-6">
+                            <field name="time"/>
+                            <field name="total_expected"/>
+                        </group>
+                        <group class="col-6">
+                            <field name="price" widget="red_color"/>
+                        </group>
+                    </div>
                     <group>
                         <field name="description" groups='openacademy.group_openacademy_manager'/>
-                        <field name="time"/>
-                        <field name="price"  widget="red_color"/>
-                        <field name="total_expected"/>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
-     <record id="course_view_form_2" model="ir.ui.view">
+    <record id="course_view_form_2" model="ir.ui.view">
         <field name="name">course.view.form.2</field>
         <field name="model">course</field>
         <field name="inherit_id" ref="openacademy.course_view_form"/>
@@ -71,24 +80,26 @@
             <xpath expr="//div[@name='title_course']" position="before">
                 <field name="active" invisible="1"/>
                 <div class="oe_button_box" name="button_box">
-                        <button name="action_view_opportunity" type="object"
-                                class="oe_stat_button" icon="fa-bullhorn"
-                                attrs ="{'invisible':[('opportunity_count','&lt;', 1)]}">
-                                <div class="o_stat_info">
-                                    <field name="opportunity_count" class="o_stat_value"/>
-                                    <span class="o_stat_text" attrs ="{'invisible':[('lead_count','&lt;', 2)]}"> Opportunities </span>
-                                    <span class="o_stat_text" attrs ="{'invisible':[('lead_count','&gt;', 1)]}"> Opportunity </span>
-                                </div>
-                        </button>
-                        <button name="action_view_lead" type="object"
-                                class="oe_stat_button" icon="fa-star"
-                                attrs ="{'invisible':[('lead_count','&lt;', 1)]}">
-                                <div class="o_stat_info">
-                                    <field name="lead_count" class="o_stat_value"/>
-                                    <span class="o_stat_text" attrs ="{'invisible':[('lead_count','&lt;', 2)]}"> Leads </span>
-                                    <span class="o_stat_text" attrs ="{'invisible':[('lead_count','&gt;', 1)]}"> Lead </span>
-                                </div>
-                        </button>
+                    <button name="action_view_opportunity" type="object"
+                            class="oe_stat_button" icon="fa-bullhorn"
+                            attrs="{'invisible':[('opportunity_count','&lt;', 1)]}">
+                        <div class="o_stat_info">
+                            <field name="opportunity_count" class="o_stat_value"/>
+                            <span class="o_stat_text" attrs="{'invisible':[('lead_count','&lt;', 2)]}">Opportunities
+                            </span>
+                            <span class="o_stat_text" attrs="{'invisible':[('lead_count','&gt;', 1)]}">Opportunity
+                            </span>
+                        </div>
+                    </button>
+                    <button name="action_view_lead" type="object"
+                            class="oe_stat_button" icon="fa-star"
+                            attrs="{'invisible':[('lead_count','&lt;', 1)]}">
+                        <div class="o_stat_info">
+                            <field name="lead_count" class="o_stat_value"/>
+                            <span class="o_stat_text" attrs="{'invisible':[('lead_count','&lt;', 2)]}">Leads</span>
+                            <span class="o_stat_text" attrs="{'invisible':[('lead_count','&gt;', 1)]}">Lead</span>
+                        </div>
+                    </button>
                 </div>
             </xpath>
         </field>
