@@ -55,4 +55,6 @@
         <field name="res_model">attendees</field>
         <field name="view_mode">tree,form,kanban</field>
     </record>
+
+    <menuitem id="openacademy_menu_attendees" name="Attendees" parent="openacademy_menu_root" action="attendees_action_list_attendees" groups="group_openacademy_manager"/>
 </odoo>

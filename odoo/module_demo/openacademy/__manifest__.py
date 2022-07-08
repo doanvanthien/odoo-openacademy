@@ -30,13 +30,21 @@
     'data': [
         'security/openacademy_sercurity.xml',
         'security/ir.model.access.csv',
-        'views/attendees_view.xml',
-        'views/course_view.xml',
-        'views/session_view.xml',
+
+        'data/course_data.xml',
+
         'views/course_menu_view.xml',
+
+        'views/course_view.xml',
+        'views/attendees_view.xml',
+        'views/session_view.xml',
+
         'views/crm_lead_views.xml',
+
         'report/session_card.xml',
         'wizard/add_attendee_view.xml',
+
+
 
     ],
     'assets':{
@@ -46,7 +54,6 @@
     },
     # only loaded in demonstration mode
     'demo': [
-        'demo/course_demo.xml',
     ],
     'license': 'LGPL-3',
 }

@@ -49,4 +49,7 @@
         <field name="res_model">session</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+    <menuitem id="openacademy_menu_session" name="Session" parent="openacademy_menu_root" action="session_action_list_session" groups="group_openacademy_user,group_openacademy_manager"/>
+
 </odoo>

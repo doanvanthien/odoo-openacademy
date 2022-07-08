@@ -123,4 +123,7 @@
         <field name="view_mode">tree,form,kanban</field>
     </record>
 
+    <menuitem id="openacademy_menu_course" name="Course" parent="openacademy_menu_root" action="course_action_list_course" groups="group_openacademy_user,group_openacademy_manager"/>
+
+
 </odoo>
