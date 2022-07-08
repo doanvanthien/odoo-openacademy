@@ -55,7 +55,7 @@
                     <group>
                         <field name="description" groups='openacademy.group_openacademy_manager'/>
                         <field name="time"/>
-                        <field name="price" widget="monetary"/>
+                        <field name="price"  widget="red_color"/>
                         <field name="total_expected"/>
                     </group>
                 </sheet>
