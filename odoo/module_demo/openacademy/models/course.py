@@ -74,7 +74,7 @@ class Course2(models.Model):
         default = dict(default or {})
         default.update({
             'title': 'Copy of ' + self.title })
-        return super(Course, self).copy(default)
+        return super(Course2, self).copy(default)
 
 
     @api.depends('opportunity_ids')

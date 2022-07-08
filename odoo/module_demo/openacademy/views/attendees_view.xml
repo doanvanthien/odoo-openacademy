@@ -43,6 +43,7 @@
         <field name="inherit_id" ref="attendees_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//group[@name='attendees_view']" position="after">
+                 <p>Instructor</p>
                 <field name="instructor" string="Instructor"/>
             </xpath>
         </field>

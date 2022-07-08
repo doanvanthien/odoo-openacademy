@@ -33,7 +33,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <h5>Instructor: <span t-field="o.partner_id"/></h5>
+                        <h5>Instructor: <span t-field="o.instructor_id"/></h5>
                     </div>
                     <div class="footer">
                             Email: company@gmail.com. Phone: 012345678
