@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+                <record id="demo_course_eng" model="course">
+                    <field name="title">English</field>
+                    <field name="description">learn English</field>
+                    <field name="time">3</field>
+                    <field name="price">5000000</field>
+                </record>
+
+                <record id="demo_course_chi" model="course">
+                    <field name="title">Chinese</field>
+                    <field name="description">learn Chinese</field>
+                    <field name="time">4</field>
+                    <field name="price">5000000</field>
+                </record>
+
+                <record id="demo_course_jap" model="course">
+                    <field name="title">Japanese</field>
+                    <field name="description">learn Japanese</field>
+                    <field name="time">6</field>
+                    <field name="price">5000000</field>
+                </record>
+    </data>
+</odoo>
