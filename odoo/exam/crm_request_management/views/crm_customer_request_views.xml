@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="crm_customer_request_view_tree" model="ir.ui.view">
+            <field name="name">crm.customer.request.view.tree</field>
+            <field name="model">crm.customer.request</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="product_id"/>
+                    <field name="opportunity_id"/>
+                    <field name="date"/>
+                    <field name="quantity"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="crm_customer_request_view_form" model="ir.ui.view">
+            <field name="name">crm.customer.request.view.form</field>
+            <field name="model">crm.customer.request</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="product_id"/>
+                            <field name="opportunity_id"/>
+                            <field name="date"/>
+                            <field name="quantity"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="crm_customer_request_action" model="ir.actions.act_window">
+            <field name="name">Customer request</field>
+            <field name="res_model">crm.customer.request</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
