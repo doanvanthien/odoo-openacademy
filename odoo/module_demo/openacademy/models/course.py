@@ -92,6 +92,11 @@ class Course2(models.Model):
                 total += self.env['crm.lead'].search([('id','=',opportunity),('stage_id','in',(3,4))]).expected_revenue
             record.total_expected = total
 
+    def unlink(self):
+        if self.opportunity_ids:
+            raise ValidationError('cant delete')
+        else:
+            return super(Course2, self).unlink()
 
 
 
