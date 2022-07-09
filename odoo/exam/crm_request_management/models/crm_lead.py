@@ -25,3 +25,16 @@ class CrmLead(models.Model):
 
             record.expected_revenue = total
 
+    # @api.model
+    # def action_new_quotation(self):
+    #     res = super(CrmLead,self).action_new_quotation()
+    #     for request in self.request_ids.ids:
+    #         vals = {
+    #             'product_id': self.env['crm.customer.request'].search([('id', '=', request)]).product_id,
+    #             'product_uom_qty': self.env['crm.customer.request'].search([('id','=',request)]).quantity,
+    #         }
+    #         res['context'].update({
+    #             'default_order_line': vals
+    #         })
+    #     print(res)
+    #     return res
