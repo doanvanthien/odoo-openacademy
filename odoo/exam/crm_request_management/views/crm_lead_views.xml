@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <data>
+
         <record id="crm_lead_view_form" model="ir.ui.view">
             <field name="name">crm.lead.view.form.2</field>
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_lead_view_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//group[@name='opportunity_partner']" position="after">
-                        <fields name="total_sales" invisible="0"/>
+                <xpath expr="//notebook/page[@name='lead']" position="before">
+                    <group attrs="{'invisible': [('type', '=', 'lead')]}">
+                        <fields name="total_sales" string="Sales"/>
+                    </group>
                 </xpath>
                 <xpath expr="//notebook/page[@name='lead']" position="after">
                     <page string="Request" name="request">
-                        <field name="request_ids" attrs="{'readonly':[('stage_id','!=',1)]}" options="{'no_edit': True}"/>
+                        <field name="request_ids" mode="tree" widget="section_and_note_one2many"
+                               attrs="{'readonly':[('stage_id','!=',1)]}">
+                            <tree editable="bottom">
+                                <field name="product_id" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                                <field name="date"/>
+                                <field name="quantity"/>
+                            </tree>
+                        </field>
                     </page>
                 </xpath>
             </field>
