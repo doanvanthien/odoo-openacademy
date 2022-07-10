@@ -1,3 +1,8 @@
+import base64
+import datetime
+
+import xlrd
+
 from odoo import api, fields, models
 
 
@@ -9,6 +14,10 @@ class CrmLead(models.Model):
     total_sales = fields.Float(compute='_compute_total_sales', string="Sales", default=0, store=True)
 
     expected_revenue = fields.Monetary(compute='_onchange_expected_revenue')
+
+    xls_file = fields.Binary('File')
+
+    document_name = fields.Char(string="File Name")
 
     @api.depends('request_ids')
     def _compute_total_sales(self):
@@ -42,3 +51,20 @@ class CrmLead(models.Model):
             'default_order_line': [(0, 0, val) for val in vals]
         })
         return res
+
+    @api.onchange('xls_file')
+    def import_request(self):
+        if self.xls_file:
+            self.request_ids = [(5, 0, 0)]
+            wb = xlrd.open_workbook(file_contents=base64.decodestring(self.xls_file))
+            for sheet in wb.sheets():
+                for row in range(1, sheet.nrows):
+                    request = []
+                    for col in range(sheet.ncols):
+                        request.append(sheet.cell(row, col).value)
+                    print(request)
+                    self.request_ids = [(0, 0, {
+                        "product_id": int(request[0]),
+                        "date": datetime.datetime.strptime(request[1], "%Y-%m-%d"),
+                        "quantity": request[2]
+                    })]

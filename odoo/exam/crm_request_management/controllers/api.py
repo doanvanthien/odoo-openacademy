@@ -3,8 +3,6 @@ import datetime
 from odoo import http
 from odoo.http import request
 
-import json
-
 token = "62f5e2acbeaab21d947f0fe18214359a7db45183o1687942761"
 
 

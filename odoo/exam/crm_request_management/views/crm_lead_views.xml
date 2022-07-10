@@ -7,13 +7,18 @@
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_lead_view_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//notebook/page[@name='lead']" position="before">
-                    <group attrs="{'invisible': [('type', '=', 'lead')]}">
-                        <fields name="total_sales" string="Sales"/>
+                <xpath expr="//group[@name='opportunity_partner']" position="before">
+                    <group>
+                        <field name="total_sales"/>
                     </group>
                 </xpath>
                 <xpath expr="//notebook/page[@name='lead']" position="after">
                     <page string="Request" name="request">
+                        <group>
+                            <field name="xls_file" filename="document_name"/>
+                            <field name="document_name" invisible="1"/>
+                        </group>
+
                         <field name="request_ids" mode="tree" widget="section_and_note_one2many"
                                attrs="{'readonly':[('stage_id','!=',1)]}">
                             <tree editable="bottom">
