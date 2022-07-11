@@ -13,7 +13,7 @@ class CrmLead(models.Model):
 
     total_sales = fields.Float(compute='_compute_total_sales', string="Sales", default=0, store=True)
 
-    expected_revenue = fields.Monetary(compute='_onchange_expected_revenue')
+    expected_revenue = fields.Monetary(compute='_onchange_expected_revenue', readonly=False, store=True)
 
     xls_file = fields.Binary('File')
 
@@ -44,7 +44,8 @@ class CrmLead(models.Model):
                 'name': request.product_id.name,
                 'product_uom_qty': request.quantity,
                 'price_unit': request.product_id.list_price,
-                'price_subtotal': request.quantity * request.product_id.list_price
+                'price_subtotal': request.quantity * request.product_id.list_price,
+                'product_uom' : request.product_id.uom_po_id.id
             })
 
         res['context'].update({
